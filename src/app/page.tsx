@@ -10,29 +10,29 @@ const merriweather = Merriweather({
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen justify-center items-center">
-      <div className="bg-white/80 rounded-2xl min-h-72 min-w-96 grid grid-cols-1 grid-rows-3 p-4 shadow-lg">
+    <main className="flex min-h-screen items-center justify-center p-4 sm:p-6">
+      <div className="grid w-full max-w-sm grid-cols-1 rounded-2xl bg-white/80 p-2 shadow-lg sm:grid-rows-3 sm:p-4 md:min-w-md">
         <div className="m-auto">
-          <QuoteIcon className="text-rose-400 size-12" />
+          <QuoteIcon className="size-12 text-rose-400" />
         </div>
         <div className="flex flex-col">
           <p
-            className={`${merriweather.className} text-center text-xl leading leading-loose whitespace-pre-line`}
+            className={`${merriweather.className} text-center text-xl leading-loose whitespace-pre-line`}
           >
             If life were predictable it would cease to be life, and be without
             flavor.
           </p>
-          <span className="text-end text-neutral-700 font-semibold">
+          <span className="text-end font-semibold text-neutral-700">
             — Eleanor Roosevelt
           </span>
         </div>
-        <div className="w-full flex justify-between items-center p-2">
-          <button className="rounded-full font-bold text-white flex justify-center gap-2 items-center p-2 bg-rose-400 hover:bg-rose-500 transition-all duration-200 ease-in-out">
-            <RefreshCw className="text-white size-4" />
+        <div className="flex w-full items-center justify-between p-2">
+          <button className="flex items-center justify-center gap-2 rounded-full bg-rose-400 bg-gradient-to-r from-rose-400 to-rose-500/60 px-3 py-2 font-bold text-white transition-all duration-200 ease-in-out hover:scale-105 hover:bg-rose-500">
+            <RefreshCw className="size-4 text-white" />
             New Quote
           </button>
-          <button className="rounded-full font-bold text-white flex justify-center gap-2 items-center p-2 bg-cyan-400 hover:bg-cyan-500 transition-all duration-200 ease-in-out">
-            <Copy className="text-white" />
+          <button className="flex cursor-pointer items-center justify-center gap-3 rounded-full border border-cyan-500 px-3 py-2 text-balance text-cyan-500 transition-all duration-200 ease-in-out hover:bg-cyan-300/10">
+            <Copy className="text-cyan size-4" />
             Copy
           </button>
         </div>
